@@ -1,7 +1,7 @@
 # Tutorial - Bank Program UI with SplashKit
 
 ## Background
-This brief tutorial seeks to demonstrate how SplashKit can be used to implement a simple UI for the BankProgram being built out in SIT771. The codebase used as the basis for the tutorial (and related testing) included all relevant tasks up to (and including) '5.3 Many Accounts'.
+This brief tutorial seeks to demonstrate how SplashKit can be used to implement a simple UI for the `BankProgram` being built out in SIT771. The codebase used as the basis for the tutorial (and related testing) included all relevant tasks up to (and including) '5.3 Many Accounts'.
 
 ## Objectives
 This tutorial will demonstrate:
