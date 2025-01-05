@@ -271,3 +271,22 @@ switch (option)
     break;
 }
 ```
+
+### 10. Tell SplashKit to render the interface
+Moving outside the `Switch` statement, it is necessary to prompt SplashKit to render the interface and refresh the window on each iteration of the `while` loop.
+```C#
+while (!window.CloseRequested)
+{
+  if (SplashKit.StartPanel("Bank Program", SplashKit.RectangleFrom(0, 0, 800, 600)))
+  {
+    // form elements...
+  }
+  // execute on each iteration of the loop to render the UI
+  SplashKit.DrawInterface();
+  SplashKit.RefreshScreen();
+  window.Refresh();
+}
+```
+
+### 11. Run the program
+When the program is run, the UI should now be rendered in a window and the form elements operable. When a transfer is initiated, relevant messaging will be written to the console per the current implementation.
