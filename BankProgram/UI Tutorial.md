@@ -273,7 +273,7 @@ switch (option)
 ```
 
 ### 10. Tell SplashKit to render the interface
-Moving outside the `Switch` statement, it is necessary to prompt SplashKit to render the interface and refresh the window on each iteration of the `while` loop.
+Moving outside the base UI panel (container), it is necessary to prompt SplashKit to render the interface and refresh the window on each iteration of the `while` loop.
 ```C#
 while (!window.CloseRequested)
 {
