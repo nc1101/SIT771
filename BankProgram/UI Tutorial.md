@@ -14,7 +14,7 @@ This tutorial will demonstrate:
 > All changes discussed in this section are to `Program.cs`.
 
 ### 1. Create a window
-The first step in introducing a UI to the BankProgram application is to create a window in which to render the interface (as demonstrated in other programs throughout the semester).
+The first step in introducing a UI to the BankProgram application is to create a window in which to render the interface (as demonstrated in other programs throughout the trimester).
 ```C#
 Window window = new Window("Bank Program", 800, 600);
 ```
