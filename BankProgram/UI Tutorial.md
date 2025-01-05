@@ -42,7 +42,7 @@ SplashKit.CloseAllWindows();
 ```
 
 ### 4. Create a container for the UI elements
-While SplashKit UI elements can be drawn directly in the window, it provides automatic layout functionality (i.e. positioning of elements in rows and columns) through use of containers. This, therefore, forms the starting point for the BankProgram UI.
+While UI elements can be drawn directly in the window, SplashKit provides automatic layout functionality (i.e. positioning of elements in rows and columns) through use of containers. This, therefore, forms the starting point for the BankProgram UI.
 ```C#
 while (!window.CloseRequested)
 {
