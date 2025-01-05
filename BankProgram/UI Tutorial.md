@@ -20,7 +20,7 @@ Window window = new Window("Bank Program", 800, 600);
 ```
 
 ### 2. Create fields to accommodate form inputs
-As the tutorial is focused on the 'Transfer' operation, three fields are required to accommodate user inputs. These can be initialised with other fields already established in `Main()` (e.g. bank, account, etc.)
+As the tutorial is focused on the 'Transfer' operation, three fields are required to accommodate user inputs. These can be initialised with other fields already established in `Main()` (e.g. myAccount, etc.)
 ```C#
 string fromAccountName = "";
 string toAccountName = "";
@@ -65,11 +65,9 @@ Although there are numerous ways to structure the BankProgram UI, this design ma
 ```C#
 while (!window.CloseRequested)
 {
-  // get user events...
   SplashKit.ProcessEvents();
   window.Clear(Color.White);
 
-  // render a panel called "Bank Program" and match window size
   if (SplashKit.StartPanel("Bank Program", SplashKit.RectangleFrom(0, 0, 800, 600)))
   {
     // iterate over the MenuOption enum
@@ -85,8 +83,6 @@ while (!window.CloseRequested)
         SplashKit.EndTreenode(option.ToString());
       }
     }
-    
-    // finish rendering the panel (NOTE: name parameter must match corresopnding 'StartPanel')
     SplashKit.EndPanel("Bank Program");
   }
 ```
@@ -96,17 +92,13 @@ As with the original implementation, a `switch` statement can be used to handle 
 ```C#
 while (!window.CloseRequested)
 {
-  // get user events...
   SplashKit.ProcessEvents();
   window.Clear(Color.White);
 
-  // render a panel called "Bank Program" and match window size
   if (SplashKit.StartPanel("Bank Program", SplashKit.RectangleFrom(0, 0, 800, 600)))
   {
-    // iterate over the MenuOption enum
     foreach (MenuOption option in Enum.GetValues(typeof(MenuOption)))
     {
-      // for each option, render a new node based on its label
       if (SplashKit.StartTreenode(option.ToString()) {
 
         switch (option)
@@ -130,13 +122,9 @@ while (!window.CloseRequested)
             // Quit button goes here...
             break;
         }
-        // as with the panel in step 4, we must explicitly finish rendering each node, ensuring
-        // the name parameter matches the one passed to the corresponding 'StartTreenode'
         SplashKit.EndTreenode(option.ToString());
       }
     }
-    
-    // finish rendering the panel (NOTE: name parameter must match corresopnding 'StartPanel')
     SplashKit.EndPanel("Bank Program");
   }
 ```
@@ -168,7 +156,7 @@ switch (option)
     // ----------------------------------------------------------------
     // NOTE: this is placed inside an 'Inset' (a rectangular container)  
     // because SplashKit appears to have trouble handling multiple text
-    // boxes embedded directly in the same treenode
+    // boxes embedded directly in the same node
     // ----------------------------------------------------------------
     SplashKit.StartInset("From Inset", 40);
 
@@ -186,18 +174,20 @@ switch (option)
     toAccountName = SplashKit.TextBox("To", toAccountName);
     SplashKit.EndInset("To Inset", 40);
 
-    // tell SplashKit we'd like to leave column 2 and return to default single column layout
+    // tell SplashKit we'd like to leave column 2 and return to the default single column layout
     // for subsequent elements
     SplashKit.LeaveColumn();
     SplashKit.ResetLayout();
 
     // add a slider to accommodate collection of transfer amount
-    SplashKit.StartInset("Amount Inset", 40);
-
-    // as with the text boxes, we assign the slider to the 'transferAmount' field established
-    // in step 2 so we can capture the current value. The 1.0f and 1000.0f parameters indicate
-    // the slider should support values in this range only. These could be established as
+    // ---------------------------------------------------------------- 
+    // NOTE: as with the text boxes, we assign the slider to the 'transferAmount' 
+    // field established in step 2 so we can capture the current value.
+    // The 1.0f and 1000.0f parameters are arbitrary and indicate the slider 
+    // should support values in this range only. These could be established as 
     // 'MinValue' and 'MaxValue' constants respectively to aid readability
+    // ----------------------------------------------------------------
+    SplashKit.StartInset("Amount Inset", 40);
     transferAmount = SplashKit.Slider("Amount", transferAmount, 1.0f, 1000.0f);
     SplashKit.EndInset("Amount Inset");
 
@@ -262,7 +252,6 @@ switch (option)
   case MenuOption.Transfer:
     // other form elements...
 
-    // add a button to support execution of the transfer opertion
     if (SplashKit.Button("Execute Transfer")
     {
       // method call to initiate transfer...
