@@ -1,13 +1,13 @@
 # Tutorial - Bank Program UI with SplashKit
 
 ## Background
-This brief tutorial seeks to demonstrate how SplashKit can be used to implement a simple UI for the BankProgram being built out in SIT771. The codebase used as the basis for the tutorial (and related testing) included all relevant tasks up to (and including '5.3 Many Accounts'.
+This brief tutorial seeks to demonstrate how SplashKit can be used to implement a simple UI for the BankProgram being built out in SIT771. The codebase used as the basis for the tutorial (and related testing) included all relevant tasks up to (and including) '5.3 Many Accounts'.
 
 ## Objectives
 This tutorial will demonstrate:
 - a basic approach to using SplashKit's Interface elements and functions
 - a practical example of a form for the 'Transfer' operation
-- how BankProgram methods can be adapted to act on UI inputs
+- how `BankProgram` methods can be adapted to act on UI inputs
 
 ## Tutorial
 
@@ -290,3 +290,6 @@ while (!window.CloseRequested)
 
 ### 11. Run the program
 When the program is run, the UI should now be rendered in a window and the form elements operable. When a transfer is initiated, relevant messaging will be written to the console per the current implementation.
+
+![ui-tutorial-screenshot](https://github.com/user-attachments/assets/8996095b-171c-4847-8ccd-a9feea813f19)
+
