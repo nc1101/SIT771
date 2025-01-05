@@ -27,7 +27,7 @@ string toAccountName = "";
 float transferAmount = 1.0f;
 ```
 
-### 3. Replace existing do..while loop in Main()
+### 3. Replace existing do..while loop in `Main()`
 The existing `do..while` loop used to prompt for user input via the console is no longer required and can, therefore, be commented out.  In its place, a new `while` loop associated with the window close requested event can be introduced to ensure the window continues to be rendered until explicitly closed (or the program is otherwise terminated).
 ```C#
 while (!window.CloseRequested)
