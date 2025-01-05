@@ -46,7 +46,6 @@ While UI elements can be drawn directly in the window, SplashKit provides automa
 ```C#
 while (!window.CloseRequested)
 {
-  // get user events...
   SplashKit.ProcessEvents();
   window.Clear(Color.White);
 
