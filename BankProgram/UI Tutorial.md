@@ -179,13 +179,13 @@ switch (option)
     SplashKit.ResetLayout();
 
     // add a slider to accommodate collection of transfer amount
-    // --------------------------------------------------------------------------
-    // NOTE: as with the text boxes, we assign the slider to the 'transferAmount' 
-    // field established in step 2 so we can capture the current value.
-    // The 1.0f and 1000.0f parameters are arbitrary and indicate the slider 
-    // should support values in this range only. These could be established as 
-    // 'MinValue' and 'MaxValue' constants respectively to aid readability
-    // --------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------
+    // NOTE: as with the text boxes, we assign the slider to a field 
+    // ('transferAmount') established in step 2 so we can capture the current value.
+    // The 1.0f and 1000.0f parameters are arbitrary and indicate the slider should 
+    // support values in this range only. These could be established as 'MinValue'
+    // and 'MaxValue' constants respectively to aid readability
+    // -----------------------------------------------------------------------------
     SplashKit.StartInset("Amount Inset", 40);
     transferAmount = SplashKit.Slider("Amount", transferAmount, 1.0f, 1000.0f);
     SplashKit.EndInset("Amount Inset");
