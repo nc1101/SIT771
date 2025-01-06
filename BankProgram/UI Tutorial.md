@@ -131,7 +131,7 @@ while (!window.CloseRequested)
 ### 7. Add Transfer form elements
 As noted above, this tutorial focuses on the 'Transfer' form. Others can be built out in a similar way. 
 
-Fundamentally, the Transfer opertion requires support for the following:
+Fundamentally, the Transfer operation requires support for the following:
 - entry of an account name from which funds should be transferred
 - entry of an account name to which funds should be transferred
 - entry of a transfer amount
