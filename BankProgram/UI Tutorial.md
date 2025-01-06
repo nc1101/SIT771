@@ -211,7 +211,8 @@ private static void DoTransfer(string fromAccountName, string toAccountName, flo
   try {
     // your code here...
 
-    // NOTE: you will need to cast 'transferAmount' to a decimal as the slider used to collect the value uses the float datatype
+    // NOTE: you will need to cast 'transferAmount' to a decimal as the slider used to collect the value
+    // uses the float datatype
   }
   catch (Exception e)
   {
