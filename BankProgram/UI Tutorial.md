@@ -162,16 +162,16 @@ switch (option)
     // the textbox is associated with the 'fromAccountName' field established in step 2, allowing
     // for its value to be captured and used in subsequent method calls
     fromAccountName = SplashKit.TextBox("From", fromAccountName);
-    SplashKit.EndInset("From Inset", 40);
+    SplashKit.EndInset("From Inset");
 
     // tell SplashKit we'd like to leave column 1 and enter column 2
     SplashKit.LeaveColumn();
     SplashKit.EnterColumn();
 
     // add a text box to accommodate collection of 'to' account name
-    SplashKit.Inset("To Inset", 40);
+    SplashKit.StartInset("To Inset", 40);
     toAccountName = SplashKit.TextBox("To", toAccountName);
-    SplashKit.EndInset("To Inset", 40);
+    SplashKit.EndInset("To Inset");
 
     // tell SplashKit we'd like to leave column 2 and return to the default single column layout
     // for subsequent elements
