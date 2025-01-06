@@ -221,16 +221,6 @@ private static void DoTransfer(string fromAccountName, string toAccountName, flo
 }
 ```
 
-The above method uses a simplified `FindAccount` utility method, which omits the console prompts.
-```C#
-private static Account FindAccount(string accountName)
-{
-  // your code here...
-
-  return result;
-}
-```
-
 ### 9. Add method call to 'Execute Transfer' button
 Returning to the form from step 7, the revised `DoTransfer` method can now be invoked on button click, taking the form input values as parameters.
 ```C#
