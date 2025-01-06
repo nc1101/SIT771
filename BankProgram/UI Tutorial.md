@@ -199,12 +199,12 @@ switch (option)
 }
 ```
 
-### 8. Update Transfer operation methods
+### 8. Update Transfer operation method
 The existing `DoTransfer` method embeds console prompts, which are no longer required given the form built in step 7. Instead, a method which acts on the inputs collected via the form is required. The core logic to actually execute the transfer is unchanged. 
 
 Although the existing method can be modified direcly, a new `DoTransfer` method can also be introduced as it will have a different signature.
 
-> NOTE: these methods assume the Bank object (`_bank`) has been added as a static member of `Program.cs`. If this is not the case, they should be updated to include the Bank object as an additional parameter
+> NOTE: this template assumes the Bank object (`_bank`) has been added as a static member of `Program.cs`. If this is not the case, it should be updated to include the Bank object as an additional parameter
 ```C#
 private static void DoTransfer(string fromAccountName, string toAccountName, float transferAmount)
 {
