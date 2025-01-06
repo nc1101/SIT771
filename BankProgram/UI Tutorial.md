@@ -204,7 +204,7 @@ The existing `DoTransfer` method embeds console prompts, which are no longer req
 
 Although the existing method can be modified direcly, a new `DoTransfer` method can also be introduced as it will have a different signature.
 
-> NOTE: this template assumes the Bank object (`_bank`) has been added as a static member of `Program.cs`. If this is not the case, it should be updated to include the Bank object as an additional parameter
+> NOTE: this method template assumes the Bank object (`_bank`) has been added as a static member of `Program.cs`. If this is not the case, it should be updated to include the Bank object as an additional parameter
 ```C#
 private static void DoTransfer(string fromAccountName, string toAccountName, float transferAmount)
 {
