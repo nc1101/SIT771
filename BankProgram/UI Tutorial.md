@@ -209,19 +209,9 @@ Although the existing method can be modified direcly, a new `DoTransfer` method 
 private static void DoTransfer(string fromAccountName, string toAccountName, float transferAmount)
 {
   try {
-    Account fromAccount = FindAccount(fromAccountName);
-    Account toAccount = FindAccount(toAccountName);
+    // your code here...
 
-    // if one or both accounts can't be found, terminate operation
-    if (fromAccount == null || toAccount == null) return;
-
-    // the transferAmount must be cast to a decimal as the slider used to collect the value uses the float datatype
-    decimal amount = Convert.ToDecimal(transferAmount);
-
-    // execute per current implementation
-    TransferTransaction transaction = new TransferTransaction(fromAccount, toAccount, amount);
-    _bank.ExecuteTransaction(transaction);
-    transaction.Print();
+    // NOTE: you will need to cast 'transferAmount' to a decimal as the slider used to collect the value uses the float datatype
   }
   catch (Exception e)
   {
@@ -234,10 +224,7 @@ The above method uses a simplified `FindAccount` utility method, which omits the
 ```C#
 private static Account FindAccount(string accountName)
 {
-  Account result = _bank.GetAccount(accountName);
-
-  if (result == null)
-    Console.WriteLine($"No account found with name {accountName}");
+  // your code here...
 
   return result;
 }
