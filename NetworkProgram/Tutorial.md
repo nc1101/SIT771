@@ -9,7 +9,7 @@ This tutorial will demonstrate:
 
 The following diagram depicts the programs and classes implemented in this tutorial. 
 
-<img width="1246" alt="Screenshot 2025-01-30 at 3 10 15 PM" src="https://github.com/user-attachments/assets/142c4c11-a963-4540-80f8-0cb0af8bd7d4" />
+<img width="1246" alt="Screenshot 2025-01-30 at 3 10 15 PM" src="https://github.com/user-attachments/assets/e916dbe2-f859-4d2c-a6ec-da87eec27ea2" />
 
 ## Tutorial - PART 1
 This section of the tutorial will focus on implementation of our game server, which will run independently of (and handle requests from) the typing test program. Given the context of our client application, the game server will support the following methods:
@@ -578,7 +578,8 @@ public static class Program
 
 ### 6. Run the programs
 To play the game, run the `GameServer` program and wait on the startup message before running the `TypingTest` program. Start the game and monitor both consoles to observe the interactions between client and server.
-![Screenshot 2025-01-29 at 8 19 41 PM](https://github.com/user-attachments/assets/92638c86-d4a3-4c50-9953-cfe313eeab5f)
+
+![Screenshot 2025-01-29 at 8 19 41 PM](https://github.com/user-attachments/assets/80d1228a-f484-4c9b-bd63-18f8f93fcf86)
 
 > ### Potential enhancements
 > - integrate a custom font to improve readabilty
